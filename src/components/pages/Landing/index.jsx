@@ -58,7 +58,7 @@ export const LandingPage = () => {
       </section>
 
       <div className='flex justify-center gap-6 py-6 bg-gray-100'>
-        <button onClick={() => navigate('/data')} className='bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded transition'>
+        <button onClick={() => navigate('/graphs')} className='bg-indigo-600 hover:bg-indigo-700 text-white py-2 px-6 rounded transition'>
           View The Data
         </button>
         <button onClick={downloadCSV} className='border border-indigo-600 text-indigo-600 hover:bg-indigo-100 py-2 px-6 rounded transition'>
