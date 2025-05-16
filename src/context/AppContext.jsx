@@ -1,6 +1,5 @@
 import { createContext, useContext, useEffect, useState } from 'react';
 import axios from 'axios';
-import testData from '../data/test_data.json';
 import { useLocalStorage } from '../hooks/useLocalStorage.js';
 
 const AppContext = createContext({});
@@ -12,21 +11,33 @@ const AppContext = createContext({});
  * - Populate the graphs with the stored data
  */
 const useAppContextProvider = () => {
-  const [graphData, setGraphData] = useState(testData);
+  const [graphData, setGraphData] = useState({});
   const [isDataLoading, setIsDataLoading] = useState(false);
 
   useLocalStorage({ graphData, setGraphData });
 
-  const getFiscalData = () => {
+  const API_BASE = 'https://asylum-be.onrender.com';
+
+  const getFiscalData = async () => {
     // TODO: Replace this with functionality to retrieve the data from the fiscalSummary endpoint
-    const fiscalDataRes = testData;
-    return fiscalDataRes;
+    try {
+      const response = await axios.get(`${API_BASE}/fiscalSummary`);
+      return response.data;
+    } catch (err) {
+      console.error('Error fetching fiscalSummary:', err);
+      return [];
+    }
   };
 
   const getCitizenshipResults = async () => {
     // TODO: Replace this with functionality to retrieve the data from the citizenshipSummary endpoint
-    const citizenshipRes = testData.citizenshipResults;
-    return citizenshipRes;
+    try {
+      const response = await axios.get(`${API_BASE}/citizenshipSummary`);
+      return response.data;
+    } catch (err) {
+      console.error('Error fetching citizenshipSummary:', err);
+      return [];
+    }
   };
 
   const updateQuery = async () => {
@@ -35,6 +46,21 @@ const useAppContextProvider = () => {
 
   const fetchData = async () => {
     // TODO: fetch all the required data and set it to the graphData state
+    try {
+      const fiscalData = await getFiscalData();
+      const citizenshipData = await getCitizenshipResults();
+
+      if (fiscalData && citizenshipData) {
+        setGraphData({
+          ...fiscalData,
+          citizenshipResults: citizenshipData,
+        });
+      }
+      setIsDataLoading(false);
+    } catch (error) {
+      console.error('Error fetching data:', error);
+      setIsDataLoading(false);
+    }
   };
 
   const clearQuery = () => {
@@ -48,6 +74,10 @@ const useAppContextProvider = () => {
       fetchData();
     }
   }, [isDataLoading]);
+
+  useEffect(() => {
+    updateQuery();
+  }, []);
 
   return {
     graphData,

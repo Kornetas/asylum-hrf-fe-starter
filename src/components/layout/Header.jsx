@@ -8,7 +8,7 @@ import { NavLink } from 'react-router-dom';
  */
 export default function Header() {
   // TODO: Replace me
-  const isAuthenticated = false;
+  const isAuthenticated = true;
 
   return (
     <header className='flex w-[100%] primary-c justify-between px-14'>
