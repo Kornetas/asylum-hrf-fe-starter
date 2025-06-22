@@ -1,8 +1,9 @@
+import React from 'react';
 import { createContext, useContext, useEffect, useState } from 'react';
 import axios from 'axios';
 import { useLocalStorage } from '../hooks/useLocalStorage.js';
 
-const AppContext = createContext({});
+export const AppContext = createContext({});
 
 /**
  * TODO: Ticket 2:

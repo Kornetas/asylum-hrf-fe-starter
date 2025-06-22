@@ -1,3 +1,4 @@
+import React from 'react';
 import { useAppContext } from '../../context/AppContext.jsx';
 import { mapTypes } from '../pages/DataVisualizations/getMapView.jsx';
 
