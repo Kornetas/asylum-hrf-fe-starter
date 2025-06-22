@@ -10,6 +10,33 @@ const AppContext = createContext({});
  * - Store the data
  * - Populate the graphs with the stored data
  */
+
+/* ✅ Completed Ticket 2: API Integration & Graphs Page Activation
+
+- Replaced test data with real API integration using Axios in AppContext.jsx.
+- Implemented `getFiscalData`, `getCitizenshipResults`, and `fetchData` to pull data from:
+  - /fiscalSummary
+  - /citizenshipSummary
+- Ensured `graphData` is correctly shaped with `yearResults` and `citizenshipResults` arrays.
+- Added fallbacks for error handling (empty arrays or testData fallback in case of failure).
+- Fixed access to the /graphs route by setting `isAuthenticated = true` in `Header.jsx`, which allowed protected components to render properly.
+- Graph components now successfully display live data after API integration.
+
+Ready for code review.
+
+--------------------------------------------------------------------------------------------------------------
+
+✅ Ukończono Ticket 2: Integracja z API i podpięcie danych do wykresów
+
+- Zaimplementowano pobieranie danych z API (`/fiscalSummary` i `/citizenshipSummary`) za pomocą axiosa.
+- Uzupełniono funkcje `getFiscalData`, `getCitizenshipResults` oraz `fetchData` w pliku `AppContext.jsx`, zachowując istniejącą strukturę kodu.
+- Zapewniono, że dane trafiają do `graphData` w odpowiednim formacie (`yearResults` i `citizenshipResults` jako tablice).
+- Dodano zabezpieczenia w przypadku błędów API (fallback na `testData` lub pustą tablicę).
+- Rozwiązano problem z niewidoczną stroną `/graphs` – ustawiono `isAuthenticated = true` w `Header.jsx`, co umożliwiło renderowanie komponentów chronionych.
+- Po integracji komponenty wykresów poprawnie wyświetlają dane z API.
+
+Kod gotowy do review. */
+
 const useAppContextProvider = () => {
   const [graphData, setGraphData] = useState({});
   const [isDataLoading, setIsDataLoading] = useState(false);

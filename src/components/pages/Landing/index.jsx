@@ -12,6 +12,42 @@ import { decodeBase64 } from '../../../utils/decodeBase64.js';
  * Implement any button functionality implied by the landing page screenshot example (tickets/examples)
  */
 
+/**
+✅ Completed Ticket 1: Landing Page Implementation
+
+What I did?
+
+- Implemented full structure and layout of the Landing Page based on the provided reference screenshot.
+- Used provided assets and React component imports (`barGraph`, `pieChart`, `lineGraph`, `paperStack`, etc.).
+- Applied Tailwind CSS for styling with a custom design to avoid visual duplication of the sample project.
+- Ensured all text content, headers, and sections match the original reference exactly.
+- Added functional buttons:
+  - "View the Data" navigates to the data page.
+  - "Download the Data" triggers CSV export via custom hook.
+  - "Read More" opens Human Rights First homepage in a new tab.
+  - "Back to Top" smoothly scrolls to top.
+- Component is fully functional and visually distinct from the reference version.
+
+This version is ready for review or further integration.
+
+-------------
+
+✅ Ukończono Ticket 1: Implementacja strony głównej (Landing Page)
+
+- Zaimplementowano pełną strukturę i layout strony głównej zgodnie z dostarczonym zrzutem ekranu.
+- Wykorzystano wymagane importy i zasoby (barGraph, pieChart, lineGraph, paperStack itd.).
+- Użyto Tailwind CSS do stylowania – projekt posiada własny wygląd, różniący się od referencyjnego.
+- Zachowano wszystkie teksty, nagłówki i sekcje zgodnie z oryginałem.
+- Dodano działające przyciski:
+  - „View the Data” prowadzi do podstrony z danymi.
+  - „Download the Data” uruchamia pobieranie danych w formacie CSV przez hooka.
+  - „Read More” otwiera stronę Human Rights First w nowej karcie.
+  - „Back to Top” płynnie przewija stronę do góry.
+- Komponent jest gotowy, funkcjonalny i wizualnie różni się od przykładowego projektu.
+
+Gotowe do code review lub dalszej integracji.
+ */
+
 export const LandingPage = () => {
   const navigate = useNavigate();
   const { downloadCSV } = useDownloadData();
