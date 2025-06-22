@@ -92,7 +92,10 @@ const useAppContextProvider = () => {
   };
 
   const clearQuery = () => {
-    setGraphData({});
+    setGraphData({
+      yearResults: [],
+      citizenshipResults: [],
+    });
   };
 
   const getYears = () => graphData?.yearResults?.map(({ fiscal_year }) => Number(fiscal_year)) ?? [];

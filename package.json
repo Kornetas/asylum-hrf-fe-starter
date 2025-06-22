@@ -9,7 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "jest --verbose",
-    "test:watch": "jest --watchAll --verbose"
+    "test:watch": "jest --watchAll --verbose",
+    "cypress:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "@auth0/auth0-react": "^2.3.0",
@@ -32,6 +34,7 @@
     "@vitejs/plugin-react": "^4.3.3",
     "autoprefixer": "^10.4.20",
     "babel-jest": "^30.0.2",
+    "cypress": "^14.5.0",
     "eslint": "^9.14.0",
     "eslint-js": "github:eslint/js",
     "eslint-plugin-react": "^7.37.2",
