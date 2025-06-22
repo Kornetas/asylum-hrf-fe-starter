@@ -13,9 +13,15 @@ Built with **React**, uses **Axios** for API calls, **Cypress** for e2e tests, a
 
 ## 💡 Tech Stack
 
-- **Frontend:** React, Vite, Axios, Plotly
+- **Languages:** HTML5, JavaScript, CSS
+- **Framework:** React (with Vite)
+- **Routing:** React Router DOM
+- **Authentication:** Auth0 React SDK
+- **HTTP Requests:** Axios
+- **Data Visualization:** React Plotly.js, capitalizr
 - **Testing:** Jest, React Testing Library, Cypress (end-to-end)
-- **Styling:** Tailwind CSS
+- **Styling:** Tailwind CSS, PostCSS, Autoprefixer
+- **Linting & Formatting:** ESLint (with plugins), Prettier
 
 ---
 
