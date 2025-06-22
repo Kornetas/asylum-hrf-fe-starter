@@ -26,11 +26,11 @@ Built with **React**, uses **Axios** for API calls, **Cypress** for e2e tests, a
 
 ---
 
-## ✅ What was done
+## ✅✅✅✅ What was done
 
 ### Finished tickets:
 
-1. **Completed Ticket 1: Landing Page Implementation**
+✅ **Completed Ticket 1: Landing Page Implementation**
 
 What I did?
 
@@ -45,7 +45,7 @@ What I did?
   - "Back to Top" smoothly scrolls to top.
 - Component is fully functional and visually distinct from the reference version.
 
-2. **Completed Ticket 2: API Integration & Graphs Page Activation**
+✅ **Completed Ticket 2: API Integration & Graphs Page Activation**
 
 - Replaced test data with real API integration using Axios in AppContext.jsx.
 - Implemented `getFiscalData`, `getCitizenshipResults`, and `fetchData` to pull data from:
@@ -56,7 +56,7 @@ What I did?
 - Fixed access to the /graphs route by setting `isAuthenticated = true` in `Header.jsx`, which allowed protected components to render properly.
 - Graph components now successfully display live data after API integration.
 
-3. **Completed Ticket 3: Auth0 Authentication & Profile Page**
+✅ **Completed Ticket 3: Auth0 Authentication & Profile Page**
 
 - Integrated Auth0 authentication via @auth0/auth0-react
 - Configured Auth0Provider with environment variables (.env)
@@ -68,6 +68,11 @@ What I did?
 - Everything works locally on http://localhost:5173 as expected
 
 ---
+
+## ✅ Additional Testing
+
+All main features have been tested with both unit and end-to-end tests to ensure reliability and stability.  
+I have also performed manual tests to check the user experience and handle potential edge cases.
 
 ## 🧪 Tests
 
@@ -87,7 +92,7 @@ What I did?
   - Update Query fetches new data.
   - Clear Query wipes graph data and shows "No data" message.
   - Header changes when the graph type changes.
-- **/** home page:
+- **/home** page:
   - Buttons "View The Data", "Download The Data", "Read More", and "Back To Top" work as expected.
   - "Download The Data" starts a file download.
   - "Read More" reveals additional content or scrolls the page.
