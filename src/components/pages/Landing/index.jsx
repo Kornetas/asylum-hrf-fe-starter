@@ -5,6 +5,7 @@ import paperStack from '../../../assets/paper-stack.jpg';
 import { useNavigate } from 'react-router-dom';
 import { useDownloadData } from '../../../hooks/useDownloadData.js';
 import { decodeBase64 } from '../../../utils/decodeBase64.js';
+import React from 'react';
 
 /**
  * TODO: Ticket 1:
